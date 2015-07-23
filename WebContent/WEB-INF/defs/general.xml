@@ -10,4 +10,9 @@
     <put-attribute name="title" value="Java blog agrigetor" />
     <put-attribute name="body" value="/WEB-INF/jsp/index.jsp" />
   </definition>
+  
+  <definition name="usersListPage" extends="common">
+    <put-attribute name="title" value="List of users" />
+    <put-attribute name="body" value="/WEB-INF/jsp/users.jsp" />
+  </definition>
 </tiles-definitions>
