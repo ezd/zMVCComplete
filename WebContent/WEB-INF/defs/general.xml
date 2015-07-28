@@ -9,10 +9,19 @@
   <definition name="index" extends="common">
     <put-attribute name="title" value="Java blog agrigetor" />
     <put-attribute name="body" value="/WEB-INF/jsp/index.jsp" />
+    <put-attribute name="current" value="index" />
   </definition>
   
   <definition name="usersListPage" extends="common">
     <put-attribute name="title" value="List of users" />
     <put-attribute name="body" value="/WEB-INF/jsp/users.jsp" />
+  	<put-attribute name="current" value="usersList" />
   </definition>
+  
+  <definition name="userDetail" extends="common">
+    <put-attribute name="title" value="UserDetail" />
+    <put-attribute name="body" value="/WEB-INF/jsp/userDetail.jsp" />
+  	<put-attribute name="current" value="usersList" />
+  </definition>
+  
 </tiles-definitions>
