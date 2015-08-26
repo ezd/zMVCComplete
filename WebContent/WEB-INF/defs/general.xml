@@ -19,9 +19,26 @@
   </definition>
   
   <definition name="userDetail" extends="common">
-    <put-attribute name="title" value="UserDetail" />
+    <put-attribute name="title" value="User Detail" />
     <put-attribute name="body" value="/WEB-INF/jsp/userDetail.jsp" />
   	<put-attribute name="current" value="usersList" />
+  </definition>
+  <definition name="account" extends="common">
+    <put-attribute name="title" value="Account Detail" />
+    <put-attribute name="body" value="/WEB-INF/jsp/account.jsp" />
+  	<put-attribute name="current" value="account" />
+  </definition>
+  
+  <definition name="userRegister" extends="common">
+    <put-attribute name="title" value="User Register" />
+    <put-attribute name="body" value="/WEB-INF/jsp/userRegister.jsp" />
+  	<put-attribute name="current" value="usersRegister" />
+  </definition>
+  
+  <definition name="login" extends="common">
+    <put-attribute name="title" value="Login" />
+    <put-attribute name="body" value="/WEB-INF/jsp/login.jsp" />
+  	<put-attribute name="current" value="login" />
   </definition>
   
 </tiles-definitions>

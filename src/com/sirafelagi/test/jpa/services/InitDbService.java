@@ -3,10 +3,12 @@ package com.sirafelagi.test.jpa.services;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.function.BiConsumer;
 
 import javax.annotation.PostConstruct;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -33,14 +35,17 @@ public class InitDbService {
 	@PostConstruct
 	public void init(){
 		Role adminRole=new Role();
-		adminRole.setName("ADMIN_ROLE");
+		adminRole.setName("ROLE_ADMIN");
 		roleRepository.save(adminRole);
 		Role userRole=new Role();
-		userRole.setName("USER_ROLE");
+		userRole.setName("ROLE_USER");
 		roleRepository.save(userRole);
 		
 		User userAdmin=new User();
-		userAdmin.setName("USER_ADMIN");
+		userAdmin.setName("admin");
+		userAdmin.setEnabled(true);
+		BCryptPasswordEncoder bcry=new BCryptPasswordEncoder();
+		userAdmin.setPassword(bcry.encode("admin"));
 		List<Role> roles=new ArrayList<Role>();
 		roles.add(userRole);
 		roles.add(adminRole);

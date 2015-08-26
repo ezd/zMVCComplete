@@ -35,5 +35,6 @@
 	<property name="dataSource" ref="dataSource"/>
 	</bean>
 	<jpa:repositories base-package="com.sirafelagi.test.jpa.repositories" entity-manager-factory-ref="emf"/>
+	<import resource="security.xml"/>
 </beans>
 

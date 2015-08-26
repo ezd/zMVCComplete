@@ -6,4 +6,6 @@ import com.sirafelagi.test.jpa.entities.User;
 
 public interface UserRepository extends JpaRepository<User, Integer> {
 
+	User findByName(String name);
+
 }

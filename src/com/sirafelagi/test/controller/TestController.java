@@ -7,8 +7,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class TestController {
 	
-	@RequestMapping("/index")
+	@RequestMapping(value={"/index","/"})
 	public String getIndex(){
+		System.out.println("it comes");
 		return "index";
 	}
 
