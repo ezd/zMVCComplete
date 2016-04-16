@@ -2,3 +2,4 @@
     pageEncoding="ISO-8859-1"%>
 
 Hello from spring mvc!
+added feature of view
